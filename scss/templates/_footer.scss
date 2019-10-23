@@ -1,0 +1,97 @@
+.footer{
+    padding: 100px 0 0;
+    background-color: $primary-color;
+    background-image: url('../images/backgrounds/footer-bg.svg');
+    background-size: contain;
+    background-position: center center;
+    position: relative;
+    .shape-curbed{
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+    }
+    &-buttons{
+        .btn{
+            &:not(:last-child){
+                margin-right: 10px;
+                @include tablet{
+                    margin-right: auto;
+                }
+            }
+            @include tablet{
+                display: block;
+                width: 80%;
+                margin: 0 auto 15px;
+            }
+        }
+    }
+    &-content{
+        h2{
+            font-size: 36px;
+            color: $white;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $white;
+            margin-bottom: 50px;
+        }
+        margin-bottom: 100px;
+        @include tablet{
+            margin-bottom: 50px;
+        }
+    }
+    &-links{
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 50px;
+        @include tablet{
+            text-align: center;
+        }
+        li{
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+            a{
+                color: $white;
+                display: block;
+                transition: all .3s ease-in;
+                &:hover{
+                    color: $site-orange;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &-payment{
+        h3{
+            font-size: 25px;
+            color: $white;
+        }
+        img{
+            width: 100%;
+        }
+        margin-bottom: 50px;
+    }
+    &-copyright{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 80%;
+            height: 1px;
+            background: $white;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.1;
+        }
+        p{
+            margin-bottom: 0;
+            color: $white;
+            padding: 40px;
+        }
+    }
+}

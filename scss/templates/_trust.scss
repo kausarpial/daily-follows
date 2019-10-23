@@ -1,0 +1,238 @@
+.trust{
+  overflow: hidden;
+  &-image{
+    position: relative;
+    margin: 100px 0;
+    @include tablet{
+      margin-top: 150px;
+    }
+    img{
+      width: 100%;
+      @include desktop-xl{
+        width: 80%;
+      }
+      @include tablet{
+        width: 100%;
+      }
+    }
+    .shape-one{
+      position: absolute;
+      top: -15%;
+      left: -20%;
+      @include desktop-xl{
+        left: -5%;
+      }
+      @include tablet{
+        left: 40%;
+        top: -50%;
+      }
+      svg{
+        width: 100px;
+        @include desktop-xl{
+          width: 80px;
+        }
+        @include tablet{
+          width: 60px;
+        }
+        path{
+          transform-origin: center center;
+        }
+        .square{
+          animation-name: up-down-reverse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .square-one{
+          animation-name: up-down;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+    }
+    .shape-two{
+      position: absolute;
+      left: -12%;
+      top: 70%;
+      @include desktop-xl{
+        left: -4%;
+      }
+      @include tablet{
+        left: 0;
+        top: 90%;
+      }
+      svg{
+        width: 30px;
+        @include desktop-xl{
+          width: 25px;
+        }
+        path{
+          transform-origin: center center;
+        }
+        .circle{
+          animation-name: scale-fade;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+        }
+        .square{
+          animation-name: up-down-reverse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+    }
+    .shape-three{
+      position: absolute;
+      left: -7%;
+      top: 30%;
+      @include desktop-xl{
+        left: 0;
+      }
+      @include tablet{
+        top: 0;
+      }
+      svg{
+        width: 90px;
+        @include desktop-xl{
+          width: 70px;
+        }
+        path{
+          transform-origin: center center;
+        }
+        .circle{
+          animation-name: scale-fade;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-delay: -1s;
+        }
+        .square{
+          animation-name: up-down-reverse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .wave{
+          animation-name: scalex-fade;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+    .shape-four{
+      position: absolute;
+      right: -10%;
+      top: -18%;
+      @include desktop-xl{
+        right: 0;
+      }
+      @include desktop{
+        top: -30%;
+        right: 20%;
+      }
+      svg{
+        width: 20px;
+        @include desktop-xl{
+          width: 17px;
+        }
+        .square{
+          animation-name: up-down-reverse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .square-one{
+          @extend .square;
+          animation-delay: -1s;
+        }
+        .square-two{
+          animation-name: up-down;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          // animation-delay: -2s;
+        }
+      }
+    }
+    .shape-five{
+      position: absolute;
+      right: -12%;
+      top: 20%;
+      @include desktop-xl{
+        right: -2%;
+      }
+      svg{
+        width: 80px;
+        @include tablet{
+          width: 50px;
+        }
+        .square{
+          animation-name: up-down-reverse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .square-one{
+          @extend .square;
+          animation-delay: -1s;
+        }
+        .circle{
+          animation-name: scale-fade;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-delay: -1s;
+          transform-origin: center center;
+        }
+      }
+    }
+    .shape-six{
+      position: absolute;
+      right: -20%;
+      top: 70%;
+      @include desktop-xl{
+        right: -5%;
+      }
+      svg{
+        width: 70px;
+        @include desktop-xl{
+          width: 50px;
+        }
+        .square{
+          animation-name: up-down;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        .wave{
+          animation-name: scalex-fade;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          transform-origin: center center;
+        }
+        .circle{
+          animation-name: scale-fade;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-delay: -1s;
+          transform-origin: center center;
+        }
+        .circle-one{
+          @extend .circle;
+          animation-delay: -2s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes up-down-reverse {
+  0% { transform: translateY(0) }
+  100% { transform: translateY(15px) }
+}
+
+@keyframes scalex-fade {
+  0%   { opacity: 1; transform: scale(0) }
+  50%  { opacity: 1; transform: scale(1) }
+  100% { opacity: 0; transform: scale(1) }
+}

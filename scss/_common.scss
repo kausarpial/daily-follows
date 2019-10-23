@@ -1,0 +1,147 @@
+body{
+    background: $body-color;
+}
+
+.section{
+    padding: 100px 0;
+    &-title{
+        h2{
+            margin-bottom: 30px;
+            @include tablet {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            width: 50%;
+            margin: 0 auto;
+            @include desktop{
+                width: 80%;
+            }
+            @include tablet{
+                width: 100%;
+            }
+        }
+        margin-bottom: 50px;
+        @include tablet{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Custom Animations For AOS
+[data-aos="trans-anim1"] {
+  transform: translateX(0);
+  opacity: 0;
+  transition-property: transform, opacity;
+  @include mobile{
+      transform: translate(0, 30px);
+  }
+  &.aos-animate {
+      transform: translateX(-80px);
+      opacity: 1;
+      @include desktop{
+          transform: translateX(-60px);
+        }
+        @include mobile{
+            transform: translate(0, 0);
+        }
+    }
+}
+
+
+[data-aos="trans-anim2"] {
+    transform: translateX(0);
+    opacity: 0;
+    transition-property: transform, opacity;
+    @include mobile{
+        transform: translate(0, 30px);
+    }
+    &.aos-animate {
+        transform: translateX(-180px);
+    opacity: 1;
+    @include desktop{
+        transform: translateX(-100px);
+    }
+    @include mobile{
+        transform: translate(0, 0);
+    }
+  }
+}
+
+[data-aos="mobile-animLeft"]{
+    @include desktop{
+        transform: translateX(-30px);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+    &.aos-animate{
+        @include desktop{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+[data-aos="mobile-animRight"]{
+    @include desktop{
+        transform: translateX(30px);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+    &.aos-animate{
+        @include desktop{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.shape-curbed{
+    svg{
+        width: 300px;
+        position: absolute;
+        path{
+            fill: $body-color;
+        }
+        @include desktop-xl{
+            width: 250px;
+        }
+        @include desktop-lg{
+            width: 180px;
+        }
+        @include desktop{
+            width: 140px;
+        }
+        @include tablet{
+            width: 120px;
+        }
+    }
+    &.bottom{
+        svg{
+            left: 0; 
+            bottom: 0;
+        }
+    }
+    &.top{
+        svg{
+            right: 0;
+            top: 0;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.display-desktop{
+    display: block;
+    @include desktop{
+        display: none;
+    }
+}
+
+.display-mobile{
+    display: none;
+    @include desktop{
+        display: block;
+    }
+}

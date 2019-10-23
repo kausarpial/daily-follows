@@ -1,0 +1,140 @@
+.main-nav{
+    padding: 20px 30px;
+    transition: .3s ease .02s;
+    @include desktop-lg{
+        padding: 15px 30px;
+    }
+    @include mobile {
+        padding: 15px 20px;
+    }
+    @include desktop{
+        background: $primary-color;
+    }
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                color: #d5c9ff;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 15px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                position: relative;
+                z-index: 1;
+                @include desktop{
+                    padding: 15px 0;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 50%; transform: translateX(-50%);
+                    bottom: -15px;
+                    @include size(5px);
+                    border-radius: 50%;
+                    background: $white;
+                    z-index: -1;
+                    transition: all .45s cubic-bezier(.165,.84,.44,1);
+                    opacity: 0;
+                }
+                &:hover{
+                    color: $white;
+                    &::before{
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(-10px);
+                    }
+                }
+                &.active{
+                    color: $white;
+                    &::before{
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(-10px);
+                    }
+                }
+            }
+        }
+        @include desktop{
+            text-align: center;
+        }
+    }
+    .navbar-brand{
+        margin-right: 0;
+        text-align: center;
+        img{
+            @include mobile{
+                width: 100px;
+            }
+        }
+    }
+    .account-list{
+        margin-left: 85px;
+        display: flex;
+        align-items: center;
+        @include desktop{
+            margin-left: 0;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        li{
+            &.list-inline-item{
+                &:not(:last-child){
+                    margin-right: 30px;
+                    @include desktop{
+                        margin-right: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            a{
+                color: $white;
+                text-transform: capitalize;
+                &.btn-violate{
+                    background: #6748db;
+                }
+            }
+        }
+    }
+    .navbar-toggler{
+        outline: 0;
+    }
+    &.nav-bg{
+        background: $primary-color;
+        padding: 15px 20px;
+        border: none;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
+        .nav-link{
+             &::before{
+                 background: darken($color: $white, $amount: 10) !important;
+             }
+        }
+    }
+    &.nav-blog{
+        background: #723BC4;
+        padding: 5px 20px;
+        border: none;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
+        .nav-link{
+             &::before{
+                 background: darken($color: $white, $amount: 10) !important;
+             }
+        }
+    }
+}
+
+// Headroomjs Styles
+.headroom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .5s ease-in-out;
+}
+.headroom--unpinned {
+    top: -150px;
+    @include desktop{
+        top: 0;
+    }
+}
+.headroom--pinned {
+    top: 0;
+}
