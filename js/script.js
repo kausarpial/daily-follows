@@ -53,20 +53,41 @@ $(document).ready(function () {
     // -----------------------------
     //  Parallax Scene
     // -----------------------------
-    if (screen.width > 991) {
-        var scene = $('#icons').get(0);
-        var parallaxInstance = new Parallax(scene);
-        parallaxInstance.friction(0.2, 0.2);
-    
-        // var scene2 = $('#audienceIcons').get(0);
-        // var parallaxInstance2 = new Parallax(scene2);
-        // parallaxInstance2.friction(0.2, 0.2);
+    if($('#icons').length != 0){
+        if (screen.width > 991) {
+            var scene = $('#icons').get(0);
+            var parallaxInstance = new Parallax(scene);
+            parallaxInstance.friction(0.2, 0.2);
+        
+            // var scene2 = $('#audienceIcons').get(0);
+            // var parallaxInstance2 = new Parallax(scene2);
+            // parallaxInstance2.friction(0.2, 0.2);
+        }
     }
 
     // -----------------------------
     //  AOS Initialize
     // -----------------------------
     AOS.init();
+    // -----------------------------
+    //  Odometer Counter
+    // -----------------------------
+    var initialNumber = 121319569;
+    
+    function counter(){
+        var increment = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+        initialNumber += increment;
+        odometer.innerHTML = numberWithCommas(initialNumber);
+        setTimeout(function(){
+            counter()
+        }, 5000);
+    }
+
+    counter();
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 });
 
 $(window).on('scroll', function () {

@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap");
 :root {
   --blue:#007bff;
@@ -8399,7 +8399,7 @@ h6, .h6 {
           transform: scale(1.03);
 }
 
-.btn-pink, .btn-green, .btn-orange, .btn-magenta {
+.btn-pink, .btn-green, .btn-orange, .btn-magenta, .btn-violate {
   background-color: #ff5694;
   color: #fff;
   position: relative;
@@ -8410,7 +8410,7 @@ h6, .h6 {
           transform-origin: center;
 }
 
-.btn-pink:hover, .btn-green:hover, .btn-orange:hover, .btn-magenta:hover {
+.btn-pink:hover, .btn-green:hover, .btn-orange:hover, .btn-magenta:hover, .btn-violate:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
   color: #fff;
@@ -8439,6 +8439,14 @@ h6, .h6 {
 
 .btn-magenta:hover {
   background-color: #1b8d8b;
+}
+
+.btn-violate {
+  background-color: #9579ff;
+}
+
+.btn-violate:hover {
+  background-color: #582dff;
 }
 
 .btn-sm {
@@ -9775,7 +9783,7 @@ h6, .h6 {
   text-transform: capitalize;
 }
 
-.main-nav .account-list li a.btn-violate {
+.main-nav .account-list li a.btn-colored {
   background: #6748db;
 }
 
@@ -9785,7 +9793,7 @@ h6, .h6 {
 
 .main-nav.nav-bg {
   background: #9579ff;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border: none;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
 }
@@ -9803,6 +9811,28 @@ h6, .h6 {
 
 .main-nav.nav-blog .nav-link::before {
   background: #e6e6e6 !important;
+}
+
+@media (max-width: 991px) {
+  .main-nav.froly {
+    background: #f77b8a;
+  }
+}
+
+.main-nav.froly .navbar-nav .nav-item .nav-link {
+  color: #fccad0;
+}
+
+.main-nav.froly .navbar-nav .nav-item .nav-link.active {
+  color: #fff;
+}
+
+.main-nav.froly .account-list li a.btn-colored {
+  background: #f44183;
+}
+
+.main-nav.froly.nav-bg {
+  background: #f77b8a;
 }
 
 .headroom {
@@ -10084,6 +10114,200 @@ h6, .h6 {
   .banner-image .eye {
     right: 20% !important;
     top: 35% !important;
+  }
+}
+
+.banner.banner-category-likes {
+  background-color: #f77b8a;
+  padding: 150px 0 100px;
+}
+
+@media (max-width: 575px) {
+  .banner.banner-category-likes {
+    padding: 90px 0 50px;
+  }
+}
+
+.banner-card {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.banner-card-item {
+  background: #fff;
+  width: 48%;
+  text-align: center;
+  -webkit-box-flex: 1;
+          flex: 1 auto;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item h2 {
+    font-size: 26px;
+  }
+}
+
+.banner-card-item:first-child {
+  box-shadow: 0px 83px 50px 0px rgba(153, 50, 63, 0.17);
+  border-radius: 60px 0;
+  padding: 70px 0;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item:first-child {
+    padding: 50px 0;
+  }
+}
+
+.banner-card-item:first-child h2 {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item:first-child h2 {
+    margin-bottom: 50px;
+  }
+}
+
+.banner-card-item:first-child h2 span {
+  color: #f77b8a;
+}
+
+.banner-card-item:first-child h2::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  border-radius: 4px;
+  background: #f77b8a;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.banner-card-item:first-child .banner-card-list {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item:first-child .banner-card-list {
+    margin-bottom: 30px;
+  }
+}
+
+.banner-card-item:last-child {
+  margin-left: 4%;
+  border-radius: 0 60px;
+  padding: 45px 0;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item:last-child {
+    padding: 30px 0;
+  }
+}
+
+.banner-card-item:last-child h2 {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  .banner-card-item:last-child h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.banner-card-item:last-child h2 span {
+  color: #27cdcb;
+}
+
+.banner-card-item:last-child h2::before {
+  content: '';
+  position: absolute;
+  width: 65%;
+  height: 4px;
+  border-radius: 4px;
+  background: #27cdcb;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 575px) {
+  .banner-card-item .btn {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-card-item .btn {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+}
+
+.banner-card-list {
+  padding: 0;
+  margin: 0 0 30px;
+  list-style-type: none;
+}
+
+@media (max-width: 575px) {
+  .banner-card-list {
+    margin-bottom: 20px;
+  }
+}
+
+.banner-card-list-item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.banner-card-list-item.active svg path {
+  fill: #fe5972;
+}
+
+.banner-card-list-item.inactive svg path {
+  fill: #bfbfbf;
+}
+
+.banner-card-list-item.inactive span {
+  color: #bfbfbf;
+}
+
+.banner-card-list-item svg {
+  width: 17px;
+}
+
+.banner-card-list-item span {
+  font-family: "Nunito", sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.banner-card-list-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 575px) {
+  .banner-card-list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-card {
+    margin-bottom: 50px;
   }
 }
 

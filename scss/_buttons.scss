@@ -36,7 +36,7 @@
     }
 }
 
-.btn-green, .btn-orange, .btn-magenta{
+.btn-green, .btn-orange, .btn-magenta, .btn-violate{
     @extend .btn-pink;
 }
 
@@ -58,6 +58,13 @@
     background-color: $site-magenta;
     &:hover{
         background-color: darken($color: $site-magenta, $amount: 15);
+    }
+}
+
+.btn-violate{
+    background-color: $primary-color;
+    &:hover{
+        background-color: darken($color: $primary-color, $amount: 15);
     }
 }
 

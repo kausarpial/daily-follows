@@ -24,6 +24,18 @@
         }
       }
     }
+    &.page-category-likes{
+      .shape-curbed.top{
+        display: none;
+      }
+      .shape-curbed.bottom{
+        svg{
+          right: 0;
+          left: unset;
+          transform: scaleX(-1);
+        }
+      }
+    }
   }
   &.instagram-like{
     .service-content{

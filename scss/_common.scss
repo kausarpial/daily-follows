@@ -130,6 +130,13 @@ body{
             transform: rotate(180deg);
         }
     }
+    &.white{
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+    }
 }
 
 .display-desktop{
@@ -144,4 +151,12 @@ body{
     @include desktop{
         display: block;
     }
+}
+
+.color-froly{
+    color: $site-froly;
+}
+
+.color-magenta{
+    color: $site-magenta;
 }

@@ -174,4 +174,105 @@
             }
         }
     }
+    &.banner-category-likes{
+        background-color: $site-froly;
+        padding: 150px 0 100px;
+    }
+    &-card{
+        display: flex;
+        align-items: center;
+        &-item{
+            background: $white;
+            width: 48%;
+            text-align: center;
+            flex: 1 auto;
+            &:first-child{
+                box-shadow: 0px 83px 50px 0px rgba(153, 50, 63, 0.17);
+                border-radius: 60px 0;
+                padding: 70px 0;
+                h2{
+                    margin-bottom: 70px;
+                    span{
+                        color: $site-froly;
+                    }
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 70%;
+                        height: 4px;
+                        border-radius: 4px;
+                        background: $site-froly;
+                        bottom: -15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                .banner-card-list{
+                    margin-bottom: 40px;
+                }
+            }
+            &:last-child{
+                margin-left: 4%;
+                border-radius: 0 60px;
+                padding: 45px 0;
+                h2{
+                    margin-bottom: 50px;
+                    span{
+                        color: $site-magenta;
+                    }
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 65%;
+                        height: 4px;
+                        border-radius: 4px;
+                        background: $site-magenta;
+                        bottom: -12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        &-list{
+            padding: 0;
+            margin: 0 0 30px;
+            list-style-type: none;
+            &-item{
+                display: flex;
+                justify-content: center;
+                &.active{
+                    svg{
+                        path{
+                            fill: #fe5972;
+                        }
+                    }
+                }
+                &.inactive{
+                    svg{
+                        path{
+                            fill: #bfbfbf;
+                        }
+                    }
+                    span{
+                        color: #bfbfbf;
+                    }
+                }
+                svg{
+                    width: 17px;
+                }
+                span{
+                    font-family: $secondary-font;
+                    display: inline-block;
+                    font-weight: 700;
+                    margin-left: 10px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
 }

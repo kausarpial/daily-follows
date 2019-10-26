@@ -88,7 +88,7 @@
             a{
                 color: $white;
                 text-transform: capitalize;
-                &.btn-violate{
+                &.btn-colored{
                     background: #6748db;
                 }
             }
@@ -117,6 +117,30 @@
              &::before{
                  background: darken($color: $white, $amount: 10) !important;
              }
+        }
+    }
+    &.froly{
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    color: #fccad0;
+                    &.active{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .account-list{
+            li{
+                a{
+                    &.btn-colored{
+                        background: #f44183;
+                    }
+                }
+            }
+        }
+        &.nav-bg{
+            background: $site-froly;
         }
     }
 }
