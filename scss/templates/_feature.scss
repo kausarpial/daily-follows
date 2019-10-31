@@ -7,7 +7,70 @@
         background: $white;
         width: 48%;
     }
+    &-content{
+        margin-left: 50px;
+        @include desktop{
+            margin-left: 0;
+        }
+        h2{
+            margin-bottom: 30px;
+        }
+        p{
+            margin-bottom: 70px;
+            @include desktop{
+                margin-bottom: 40px;
+            }
+        }
+        @include tablet{
+            text-align: center;
+        }
+        .btn{
+            @include tablet{
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+    &-counter{
+        margin-top: 150px;
+        text-align: center;
+        background: $site-froly;
+        padding: 30px 30px 35px;
+        border-radius: 50px 0;
+        @include desktop{
+            margin-top: 80px;
+        }
+        &-number{
+            color: $white;
+            font-weight: 100;
+            font-size: 80px;
+            margin-bottom: 10px;
+            @include tablet{
+                font-size: 60px;
+            }
+            @include mobile{
+                font-size: 40px;
+            }
+        }
+        p{
+            margin-bottom: 0;
+            color: $white;
+            font-size: 20px;
+            @include tablet{
+                font-size: 16px;
+            }
+        }
+        
+    }
+    &-image{
+        img{
+            width: 100%;
+        }
+    }
     &.page-category-likes{
+        @include tablet{
+            padding: 100px 0;
+        }
         .feature-items-shapes{
             position: absolute;
             width: 100%;
@@ -20,16 +83,31 @@
                     height: auto;
                     top: -15%;
                     right: 10%;
+                    animation-name: up-down;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    @include tablet{
+                        top: -5%;
+                    }
                 }
                 &.circle-triangle{
                     width: 100px;
                     right: 2%;
                     bottom: -10%;
+                    animation-name: up-down;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
                 }
                 &.square-triangle{
                     width: 120px;
                     left: -15%;
                     bottom: 5%;
+                    animation-name: left-right;
+                    animation-duration: 2.5s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
                 }
             }
         }
@@ -48,6 +126,21 @@
                 box-shadow: 0px 100px 133px 0px rgba(144, 151, 165, 0.24);
                 left: 50%; top: 50%;
                 transform: translate(-50%, -52%);
+                @include desktop-lg{
+                    transform: translate(-50%, -47%);
+                }
+                @include desktop{
+                    transform: translate(-50%, -53%);
+                }
+                @include tablet{
+                    transform: translate(-50%, -47%);
+                }
+                @include mobile{
+                    transform: translate(-50%, -52%);
+                }
+            }
+            @include desktop{
+                margin-bottom: 50px;
             }
         }
         .feature-item{
@@ -59,6 +152,9 @@
                 width: 60%;
                 margin-bottom: 15px;
                 line-height: 24px;
+                @include mobile{
+                    width: 100%;
+                }
             }
             &::before{
                 position: absolute;
@@ -76,7 +172,7 @@
                 height: 250px;
                 background: #000;
                 border-radius: 50%;
-                z-index: -1;
+                z-index: -2;
             }
             margin-bottom: 4%;
             padding-left: 25px;
@@ -150,15 +246,6 @@
                     transform: translate(70%, -20%);
                 }
             }
-        }
-    }
-    &-content{
-        margin-left: 50px;
-        h2{
-            margin-bottom: 30px;
-        }
-        p{
-            margin-bottom: 70px;
         }
     }
 }

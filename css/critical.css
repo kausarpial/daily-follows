@@ -10128,6 +10128,39 @@ h6, .h6 {
   }
 }
 
+.banner.banner-category-followers {
+  background-color: #9579ff;
+  padding: 150px 0 120px;
+}
+
+@media (max-width: 575px) {
+  .banner.banner-category-followers {
+    padding: 90px 0 50px;
+  }
+}
+
+.banner.banner-category-followers .banner-card-item {
+  border-radius: 180px;
+  padding: 100px 0;
+}
+
+.banner.banner-category-followers .banner-card-item h2 {
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.banner.banner-category-followers .banner-card-item:last-child {
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+}
+
+@media (max-width: 991px) {
+  .banner.banner-category-followers .banner-card-item {
+    margin-bottom: 50px;
+    padding: 70px 0;
+  }
+}
+
 .banner-card {
   display: -webkit-box;
   display: flex;

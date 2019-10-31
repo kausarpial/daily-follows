@@ -1,0 +1,71 @@
+.faq{
+    padding: 100px 0;
+    .section-title{
+        margin-bottom: 100px;
+    }
+    &-item{
+        padding: 70px 40px;
+        background: $white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 50px;
+        margin: 0 10px 40px;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 80px;
+            background: $black;
+            top: 0; left: 0;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        h3{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        p{
+            margin-bottom: 0;
+            line-height: 30px;
+        }
+        &.sundown{
+            &::before{
+                background: #ffb4b6;
+            }
+        }
+        &.melrose{
+            &::before{
+                background: #c1bfff;
+            }
+        }
+        &.charlotte{
+            &::before{
+                background: #baf7f7;
+            }
+        }
+        &.romantic{
+            &::before{
+                background: #ffcfba;
+            }
+        }
+        &.periwinkle{
+            &::before{
+                background: #b4cdff;
+            }
+        }
+        &.mauve{
+            &::before{
+                background: #fabfff;
+            }
+        }
+        &.cream-brulee{
+            &::before{
+                background: #ffe1a0;
+            }
+        }
+        &.caper{
+            &::before{
+                background: #bfea9d;
+            }
+        }
+    }
+}

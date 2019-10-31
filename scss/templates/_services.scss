@@ -24,7 +24,7 @@
         }
       }
     }
-    &.page-category-likes{
+    &.page-category-likes, &.page-category-followers{
       .shape-curbed.top{
         display: none;
       }
@@ -34,6 +34,11 @@
           left: unset;
           transform: scaleX(-1);
         }
+      }
+    }
+    &.page-category-followers{
+      .service-content{
+        margin-left: 50px;
       }
     }
   }
@@ -189,4 +194,9 @@
 @keyframes up-down {
   0% { transform: translateY(0) }
   100% { transform: translateY(-20px) }
+}
+
+@keyframes left-right {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(30px) }
 }

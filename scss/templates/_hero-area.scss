@@ -177,6 +177,27 @@
     &.banner-category-likes{
         background-color: $site-froly;
         padding: 150px 0 100px;
+        @include mobile{
+            padding: 90px 0 50px;
+        }
+    }
+    &.banner-category-followers{
+        background-color: $primary-color;
+        padding: 150px 0 120px;
+        @include mobile{
+            padding: 90px 0 50px;
+        }
+        .banner-card-item{
+            border-radius: 180px;
+            padding: 100px 0;
+            h2{
+                margin-bottom: 50px;
+                font-size: 30px;
+            }
+            &:last-child{
+                transform: translateY(70px);
+            }
+        }
     }
     &-card{
         display: flex;
@@ -186,12 +207,23 @@
             width: 48%;
             text-align: center;
             flex: 1 auto;
+            @include mobile{
+                h2{
+                    font-size: 26px;
+                }
+            }
             &:first-child{
                 box-shadow: 0px 83px 50px 0px rgba(153, 50, 63, 0.17);
                 border-radius: 60px 0;
                 padding: 70px 0;
+                @include mobile{
+                    padding: 50px 0;
+                }
                 h2{
                     margin-bottom: 70px;
+                    @include mobile{
+                        margin-bottom: 50px;
+                    }
                     span{
                         color: $site-froly;
                     }
@@ -210,14 +242,23 @@
                 }
                 .banner-card-list{
                     margin-bottom: 40px;
+                    @include mobile{
+                        margin-bottom: 30px;
+                    }
                 }
             }
             &:last-child{
                 margin-left: 4%;
                 border-radius: 0 60px;
                 padding: 45px 0;
+                @include mobile{
+                    padding: 30px 0;
+                }
                 h2{
                     margin-bottom: 50px;
+                    @include mobile{
+                        margin-bottom: 30px;
+                    }
                     span{
                         color: $site-magenta;
                     }
@@ -235,11 +276,26 @@
                     }
                 }
             }
+            @include mobile{
+                .btn{
+                    padding: 15px 20px;
+                    font-size: 14px;
+                }
+            }
+            @include mobile-xs{
+                .btn{
+                    padding: 15px 10px;
+                    font-size: 12px;
+                }
+            }
         }
         &-list{
             padding: 0;
             margin: 0 0 30px;
             list-style-type: none;
+            @include mobile{
+                margin-bottom: 20px;
+            }
             &-item{
                 display: flex;
                 justify-content: center;
@@ -271,8 +327,14 @@
                 }
                 &:not(:last-child){
                     margin-bottom: 25px;
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
                 }
             }
+        }
+        @include desktop{
+            margin-bottom: 50px;
         }
     }
 }

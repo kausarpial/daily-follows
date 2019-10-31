@@ -1,0 +1,68 @@
+.cta{
+    background-color: $white;
+    position: relative;
+    &-shape{
+        position: absolute;
+        width: 200px;
+        opacity: 0.5;
+        left: 5%;
+        animation-name: left-right;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        img{
+            width: 100%;
+        }
+        @include tablet{
+            width: 130px;
+        }
+    }
+    &-content{
+        text-align: center;
+        h2{
+            font-size: 55px;
+            margin-bottom: 40px;
+            @include tablet{
+                font-size: 40px;
+            }
+        }
+        p{
+            width: 70%;
+            margin: 0 auto 70px;
+            @include tablet{
+                width: 100%;
+            }
+            @include mobile{
+                margin-bottom: 40px;
+            }
+        }
+        &-action{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+                @include mobile{
+                    display: block;
+                }
+                &:not(:last-child){
+                    margin-right: 30px;
+                    @include mobile{
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+                .btn{
+                    min-width: 230px;
+                    font-weight: 600;
+                    @include mobile{
+                        min-width: 80%;
+                    }
+                    @include mobile-xs{
+                        min-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
