@@ -39,6 +39,9 @@
     &.page-category-followers{
       .service-content{
         margin-left: 50px;
+        @include tablet{
+          margin-left: 0;
+        }
       }
     }
   }

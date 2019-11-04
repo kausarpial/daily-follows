@@ -1,4 +1,5 @@
 .feature{
+    position: relative;
     padding: 180px 0 100px;
     &-items{
         position: relative;
@@ -65,6 +66,9 @@
     &-image{
         img{
             width: 100%;
+        }
+        @include desktop{
+            margin-bottom: 50px;
         }
     }
     &.page-category-likes{
@@ -245,6 +249,38 @@
                     background: #fecfba;
                     transform: translate(70%, -20%);
                 }
+            }
+        }
+    }
+    &.page-category-followers{
+        .feature-counter{
+            background: #ffb879;
+            border-radius: 100px;
+        }
+        .feature-content{
+            margin-left: 0;
+        }
+        .feature-shapes{
+            opacity: 0.5;
+            .half-circle{
+                position: absolute;
+                top: 5%;
+                width: 120px;
+                right: 10%;
+                animation-name: up-down;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            .circle-triangle{
+                position: absolute;
+                width: 90px;
+                bottom: 10%;
+                left: 5%;
+                animation-name: left-right;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
             }
         }
     }

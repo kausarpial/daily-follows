@@ -8453,6 +8453,30 @@ h6, .h6 {
   padding: 12px 40px;
 }
 
+.btn-xs {
+  padding: 10px 30px;
+}
+
+.btn-pink-outline {
+  color: #ff5694;
+  border: 1px solid #ff5694;
+}
+
+.btn-pink-outline:hover {
+  background: #ff5694;
+  color: #fff;
+}
+
+.btn-magenta-outline {
+  color: #27cdcb;
+  border: 1px solid #27cdcb;
+}
+
+.btn-magenta-outline:hover {
+  background: #27cdcb;
+  color: #fff;
+}
+
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
   -webkit-transition-duration: 50ms;
           transition-duration: 50ms;
@@ -10159,6 +10183,25 @@ h6, .h6 {
     margin-bottom: 50px;
     padding: 70px 0;
   }
+}
+
+.banner.banner-category-instant {
+  padding: 150px 0 70px;
+}
+
+@media (max-width: 767px) {
+  .banner.banner-category-instant {
+    padding: 80px 0 50px;
+  }
+}
+
+.banner.banner-category-instant .banner-text {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.banner.banner-category-instant .banner-text p {
+  margin-bottom: 0;
 }
 
 .banner-card {

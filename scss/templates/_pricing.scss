@@ -1,0 +1,127 @@
+.instant-pricing{
+    position: relative;
+    padding: 100px 0;
+    background-color: $white;
+    &-item{
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1px #dae0e6;
+        padding-bottom: 20px;
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        background: $white;
+        &:hover{
+            box-shadow: inset 0 0 0 1px $site-pink;
+            .quantity{
+                .shape{
+                    &::before{
+                        background: $site-pink;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .quantity{
+            padding: 20px;
+            background-color: $site-pink;
+            position: relative;
+            h3, span{
+                color: $white;
+            }
+            h3{
+                margin-bottom: 0;
+                font-size: 35px;
+            }
+            margin-bottom: 25px;
+            .shape{
+                position: absolute;
+                bottom: -3px;
+                right: 0;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    height: 84%;
+                    width: 1px;
+                    background: #dae0e6;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    transition: 0.3s ease;
+                }
+                svg{
+                    width: 40px;
+                    transform: scaleX(-1);
+                    path{
+                        fill: $white;
+                    }
+                }
+            }
+        }
+        .price{
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        .more{
+            display: block;
+            color: $black;
+            text-decoration: underline;
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+    &-shapes{
+        img{
+            position: absolute;
+            width: 120px;
+        }
+        .circle-square{
+            left: 18%;
+            top: 20%;
+            animation-name: up-down;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .square-square{
+            right: 16%;
+            top: 60%;
+            animation-name: up-down-reverse;
+            animation-delay: -2s;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    }
+}
+
+.auto-pricing{
+    position: relative;
+    padding: 100px 0;
+    &-item{
+        @extend .instant-pricing-item;
+        box-shadow: inset 0 0 0 1px $white;
+        .quantity{
+            background-color: $site-magenta;
+            .shape{
+                &::before{
+                    background: $white;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: inset 0 0 0 1px $site-magenta;
+            .quantity{
+                .shape{
+                    &::before{
+                        background: $site-magenta;
+                    }
+                }
+            }
+        }
+    }
+    &-shapes{
+        @extend .instant-pricing-shapes;
+    }
+}

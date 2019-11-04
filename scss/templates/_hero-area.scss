@@ -197,6 +197,20 @@
             &:last-child{
                 transform: translateY(70px);
             }
+            @include desktop{
+                margin-bottom: 50px;
+                padding: 70px 0;
+            }
+        }
+    }
+    &.banner-category-instant{
+        padding: 150px 0 70px;
+        .banner-text{
+            margin-top: 50px;
+            margin-bottom: 20px;
+            p{
+                margin-bottom: 0;
+            }
         }
     }
     &-card{

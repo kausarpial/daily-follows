@@ -1,0 +1,62 @@
+.statistic{
+    padding: 100px 0;
+    background: $white;
+    position: relative;
+    &-shapes{
+        img{
+            position: absolute;
+            width: 120px;
+            opacity: 0.5;
+        }
+        .half-circle{
+            left: 8%;
+            top: 20%;
+            animation-name: up-down;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .circle-triangle{
+            right: 6%;
+            top: 60%;
+            animation-name: up-down-reverse;
+            animation-delay: -2s;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    }
+    &-item{
+        text-align: center;
+        h3{
+            font-size: 20px;
+        }
+        p{
+            color: $text-color-dark;
+        }
+        &-progress{
+            .ldBar-label{
+                font-size: 35px;
+                font-family: $secondary-font;
+                font-weight: 700;
+            }
+            &.plus{
+                .ldBar-label{
+                    &::after{
+                        content: "+";
+                    }
+                }
+            }
+            &.billion{
+                .ldBar-label{
+                    &::after{
+                        content: "billion";
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@
     font-weight: 500;
 }
 
+
 .btn-primary{
     background-image: $primary-gradient;
     color: $white;
@@ -70,4 +71,25 @@
 
 .btn-sm{
     padding: 12px 40px;
+}
+.btn-xs{
+    padding: 10px 30px;
+}
+
+.btn-pink-outline{
+    color: $site-pink;
+    border:1px solid $site-pink;
+    &:hover{
+        background: $site-pink;
+        color: $white;
+    }
+}
+
+.btn-magenta-outline{
+    color: $site-magenta;
+    border:1px solid $site-magenta;
+    &:hover{
+        background: $site-magenta;
+        color: $white;
+    }
 }

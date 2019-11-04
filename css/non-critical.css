@@ -643,6 +643,28 @@ body {
   content: "\e905";
 }
 
+.ldBar {
+  position: relative;
+}
+
+.ldBar.label-center > .ldBar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 3px #fff;
+}
+
+.ldBar-label:after {
+  content: "%";
+  display: inline;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+  content: "";
+}
+
 .about-item {
   padding: 70px 30px 50px;
   -webkit-transition: .3s ease;
@@ -770,6 +792,41 @@ body {
   .about .col-6 {
     padding-left: 7px;
     padding-right: 7px;
+  }
+}
+
+.banner-category-instant .about-item {
+  pointer-events: none;
+}
+
+.banner-category-instant .about-item .icon {
+  background: transparent;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.banner-category-instant .about-item .icon::before {
+  content: none;
+}
+
+.banner-category-instant .about-item .icon i {
+  font-size: 45px;
+}
+
+.banner-category-instant .about-item .icon i::before {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+}
+
+.banner-category-instant .about-item h3, .banner-category-instant .about-item p {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .banner-category-instant .about-item {
+    background: transparent;
+    box-shadow: none;
   }
 }
 
@@ -1103,6 +1160,150 @@ body {
     -webkit-transform: translateX(30px);
             transform: translateX(30px);
   }
+}
+
+.instant-pricing {
+  position: relative;
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.instant-pricing-item, .auto-pricing-item {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px #dae0e6;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.instant-pricing-item:hover, .auto-pricing-item:hover {
+  box-shadow: inset 0 0 0 1px #ff5694;
+}
+
+.instant-pricing-item:hover .quantity .shape::before, .auto-pricing-item:hover .quantity .shape::before {
+  background: #ff5694;
+  height: 100%;
+}
+
+.instant-pricing-item .quantity, .auto-pricing-item .quantity {
+  padding: 20px;
+  background-color: #ff5694;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.instant-pricing-item .quantity h3, .auto-pricing-item .quantity h3, .instant-pricing-item .quantity span, .auto-pricing-item .quantity span {
+  color: #fff;
+}
+
+.instant-pricing-item .quantity h3, .auto-pricing-item .quantity h3 {
+  margin-bottom: 0;
+  font-size: 35px;
+}
+
+.instant-pricing-item .quantity .shape, .auto-pricing-item .quantity .shape {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+
+.instant-pricing-item .quantity .shape::before, .auto-pricing-item .quantity .shape::before {
+  position: absolute;
+  content: '';
+  height: 84%;
+  width: 1px;
+  background: #dae0e6;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.instant-pricing-item .quantity .shape svg, .auto-pricing-item .quantity .shape svg {
+  width: 40px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.instant-pricing-item .quantity .shape svg path, .auto-pricing-item .quantity .shape svg path {
+  fill: #fff;
+}
+
+.instant-pricing-item .price, .auto-pricing-item .price {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.instant-pricing-item .more, .auto-pricing-item .more {
+  display: block;
+  color: #000;
+  text-decoration: underline;
+  font-style: italic;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.instant-pricing-shapes img, .auto-pricing-shapes img {
+  position: absolute;
+  width: 120px;
+}
+
+.instant-pricing-shapes .circle-square, .auto-pricing-shapes .circle-square {
+  left: 18%;
+  top: 20%;
+  -webkit-animation-name: up-down;
+          animation-name: up-down;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.instant-pricing-shapes .square-square, .auto-pricing-shapes .square-square {
+  right: 16%;
+  top: 60%;
+  -webkit-animation-name: up-down-reverse;
+          animation-name: up-down-reverse;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.auto-pricing {
+  position: relative;
+  padding: 100px 0;
+}
+
+.auto-pricing-item {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.auto-pricing-item .quantity {
+  background-color: #27cdcb;
+}
+
+.auto-pricing-item .quantity .shape::before {
+  background: #fff;
+}
+
+.auto-pricing-item:hover {
+  box-shadow: inset 0 0 0 1px #27cdcb;
+}
+
+.auto-pricing-item:hover .quantity .shape::before {
+  background: #27cdcb;
 }
 
 .feature {
@@ -2027,6 +2228,81 @@ body {
   }
 }
 
+.statistic {
+  padding: 100px 0;
+  background: #fff;
+  position: relative;
+}
+
+.statistic-shapes img {
+  position: absolute;
+  width: 120px;
+  opacity: 0.5;
+}
+
+.statistic-shapes .half-circle {
+  left: 8%;
+  top: 20%;
+  -webkit-animation-name: up-down;
+          animation-name: up-down;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.statistic-shapes .circle-triangle {
+  right: 6%;
+  top: 60%;
+  -webkit-animation-name: up-down-reverse;
+          animation-name: up-down-reverse;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.statistic-item {
+  text-align: center;
+}
+
+.statistic-item h3 {
+  font-size: 20px;
+}
+
+.statistic-item p {
+  color: #182345;
+}
+
+@media (max-width: 991px) {
+  .statistic-item {
+    margin-bottom: 40px;
+  }
+}
+
+.statistic-item-progress .ldBar-label {
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+
+.statistic-item-progress.plus .ldBar-label::after {
+  content: "+";
+}
+
+.statistic-item-progress.billion .ldBar-label::after {
+  content: "billion";
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .faq {
   padding: 100px 0;
 }
@@ -2340,6 +2616,10 @@ body {
 
 .footer .shape-curbed svg path {
   fill: #fff;
+}
+
+.footer .shape-curbed.gray svg path {
+  fill: #f4f5f6;
 }
 
 .footer-buttons .btn:not(:last-child) {

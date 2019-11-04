@@ -98,3 +98,28 @@
         }
     }
 }
+
+.banner-category-instant{
+    .about-item{
+        .icon{
+            background: transparent;
+            box-shadow: none;
+            margin-bottom: 10px;
+            &::before{
+                content: none;
+            }
+            i{
+                font-size: 45px;
+                &::before{
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: $white;
+                }
+            }
+        }
+        h3, p{
+            color: $white;
+        }
+        pointer-events: none;
+    }
+}
