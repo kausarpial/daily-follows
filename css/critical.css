@@ -8378,6 +8378,8 @@ h6, .h6 {
   border: none;
   border-radius: 50px;
   font-weight: 500;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-primary {
@@ -8449,6 +8451,10 @@ h6, .h6 {
   background-color: #582dff;
 }
 
+.btn-lg {
+  padding: 18px 65px;
+}
+
 .btn-sm {
   padding: 12px 40px;
 }
@@ -8475,6 +8481,17 @@ h6, .h6 {
 .btn-magenta-outline:hover {
   background: #27cdcb;
   color: #fff;
+}
+
+.btn-white-magenta {
+  background: #fff;
+  color: #27cdcb;
+}
+
+.btn-white-magenta:hover {
+  color: #27cdcb;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
@@ -9894,10 +9911,8 @@ h6, .h6 {
   top: 0;
   width: 100%;
   opacity: 0.07;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
+  -webkit-transform: scaleX(-1) translateY(-25%);
+          transform: scaleX(-1) translateY(-25%);
 }
 
 .banner-text {
@@ -10385,6 +10400,21 @@ h6, .h6 {
   .banner-card {
     margin-bottom: 50px;
   }
+}
+
+.banner.banner-product-details {
+  padding: 100px 0 220px;
+}
+
+@media (max-width: 1200px) {
+  .banner.banner-product-details {
+    padding: 100px 0 250px;
+  }
+}
+
+.banner.banner-product-details .banner-background {
+  -webkit-transform: scaleX(-1) translateY(-25%);
+          transform: scaleX(-1) translateY(-25%);
 }
 
 /*# sourceMappingURL=maps/critical.css.map */

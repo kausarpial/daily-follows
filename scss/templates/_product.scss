@@ -1,0 +1,145 @@
+.product{
+    &-table{
+        padding: 0 0 100px 0;
+        &-item{
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            &-wrapper{
+                margin-top: -250px;
+            }
+            &-shape{
+                position: absolute;
+                bottom: -100px;
+                right: -100px;
+                svg{
+                    width: 200px;
+                }
+            }
+            &.purchase-now{
+                background: $site-magenta;
+                padding: 30px 35px;
+                .product-table-item-shape{
+                    svg{
+                        path{
+                            fill: #1A9493;
+                        }
+                    }
+                }
+                .header{
+                    display: flex;
+                    border-bottom: 1px solid #52d7d5;
+                    margin-bottom: 50px;
+                    h3{
+                        font-size: 45px;
+                        color: $white;
+                        span{
+                            font-size: 16px;
+                            display: inline-block;
+                            margin-left: 10px;
+                        }
+                        &:last-child{
+                            flex: 1;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            &.automatic-now{
+                background: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 50px;
+                text-align: center;
+                .product-table-item-shape{
+                    svg{
+                        path{
+                            fill: #ccbeff;
+                        }
+                    }
+                }
+                h3{
+                    color: #505050;
+                    margin-bottom: 10px;
+                }
+                p{
+                    margin-bottom: 30px;
+                }
+                h4{
+                    span{
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #777777;
+                        margin-bottom: 10px;
+                    }
+                    font-size: 25px;
+                    margin-bottom: 30px;
+                    color: $primary-color;
+                }
+                .btn{
+                    // display: inline-block;
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &-feature-list{
+            margin: 0 0 60px 0;
+            padding: 0;
+            li{
+                display: flex;
+                color: $white;
+                font-family: $secondary-font;
+                font-weight: 700;
+                align-items: center;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                svg{
+                    width: 20px;
+                    height: auto;
+                }
+                span{
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+        &-action-list{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            li{
+                a{
+                    font-weight: 600;
+                }
+                &:first-child{
+                    a{
+                        background: $white;
+                        color: $site-magenta;
+                        padding: 20px 60px;
+                        border-radius: 50px;
+                        display: block;
+                        transition: 0.3s ease;
+                        &:hover{
+                            text-decoration: none;
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+                &:last-child{
+                    a{
+                        display: block;
+                        color: $white;
+                        margin-left: 20px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

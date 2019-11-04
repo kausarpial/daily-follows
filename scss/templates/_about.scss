@@ -121,5 +121,9 @@
             color: $white;
         }
         pointer-events: none;
+        @include tablet{
+            background: transparent;
+            box-shadow: none;
+        }
     }
 }

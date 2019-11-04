@@ -34,6 +34,9 @@
         p{
             color: $text-color-dark;
         }
+        @include desktop{
+            margin-bottom: 40px;
+        }
         &-progress{
             .ldBar-label{
                 font-size: 35px;
