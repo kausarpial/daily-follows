@@ -214,6 +214,12 @@
                 margin-bottom: 0;
             }
         }
+        &.bg-froly{
+            background: $site-froly;
+        }
+        &.bg-magenta{
+            background: $site-magenta;
+        }
     }
     &-card{
         display: flex;
@@ -355,8 +361,14 @@
     }
     &.banner-product-details{
         padding: 100px 0 220px;
+        @include desktop-lg{
+            padding: 100px 0 250px;
+        }
         .banner-background{
             transform: scaleX(-1) translateY(-25%);
+        }
+        &.bg-froly{
+            background: $site-froly;
         }
     }
 }

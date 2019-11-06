@@ -36,7 +36,7 @@
             margin-bottom: 25px;
             .shape{
                 position: absolute;
-                bottom: -3px;
+                bottom: -5px;
                 right: 0;
                 &::before{
                     position: absolute;
@@ -92,6 +92,24 @@
             animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+        }
+    }
+    &.instant-pricing-primary{
+        background: transparent;
+        .instant-pricing-item{
+            .quantity{
+                background-color: $primary-color;
+            }
+            &:hover{
+                box-shadow: inset 0 0 0 1px $primary-color;
+                .quantity{
+                    .shape{
+                        &::before{
+                            background: $primary-color;
+                        }
+                    }
+                }
+            }
         }
     }
 }

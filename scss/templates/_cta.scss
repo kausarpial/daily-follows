@@ -3,10 +3,27 @@
     position: relative;
     &-shape{
         position: absolute;
-        width: 200px;
+        width: 140px;
         opacity: 0.5;
         left: 5%;
         animation-name: left-right;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        img{
+            width: 100%;
+        }
+        @include tablet{
+            width: 130px;
+        }
+    }
+    &-shape2{
+        position: absolute;
+        width: 120px;
+        opacity: 0.5;
+        top: 60%;
+        right: 5%;
+        animation-name: up-down;
         animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -64,5 +81,82 @@
                 }
             }
         }
+    }
+    &.automatic-likes{
+        padding: 120px 0;
+        .cta-title{
+            h2{
+                font-size: 55px;
+                @include tablet{
+                    font-size: 40px;
+                }
+            }
+            p{
+                width: 60%;
+                margin: 0 auto 50px;
+                @include tablet{
+                    width: 100%;
+                }
+            }
+        }
+        .cta-content-block{
+            text-align: center;
+            padding: 50px 15% 30px;
+            background: $site-magenta;
+            border-radius: 200px;
+            h3,p{
+                color: $white;
+            }
+            h3{
+                font-size: 24px;
+                margin-bottom: 35px;
+                @include tablet{
+                    margin-bottom: 20px;
+                }
+            }
+            p{
+                margin-bottom: 30px;
+            }
+            @include tablet{
+                padding: 30px 40px;
+                border-radius: 15px;
+            }
+        }
+        .automatic-likes-shapes{
+            img{
+                position: absolute;
+                width: 120px;
+                opacity: 0.5;
+                @include mobile{
+                    width: 70px;
+                }
+            }
+            .half-circle{
+                right: 6%;
+                top: 80%;
+                animation-name: up-down;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            .circle-triangle{
+                left: 5%;
+                top: 10%;
+                animation-name: up-down-reverse;
+                animation-delay: -2s;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        }
+    }
+    &.automatic-views{
+        @extend .cta.automatic-likes;
+        .cta-content-block{
+            background-color: $primary-color;
+        }
+    }
+    &.page-product-details{
+        background: transparent;
     }
 }

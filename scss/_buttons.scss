@@ -6,6 +6,7 @@
     border: none;
     border-radius: 50px;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 
@@ -69,6 +70,10 @@
     }
 }
 
+.btn-lg{
+    padding: 18px 65px;
+}
+
 .btn-sm{
     padding: 12px 40px;
 }
@@ -85,11 +90,38 @@
     }
 }
 
+.btn-primary-outline{
+    color: $primary-color;
+    border:1px solid $primary-color;
+    &:hover{
+        background: $primary-color;
+        color: $white;
+    }
+}
+
 .btn-magenta-outline{
     color: $site-magenta;
     border:1px solid $site-magenta;
     &:hover{
         background: $site-magenta;
         color: $white;
+    }
+}
+
+.btn-white-magenta{
+    background: $white;
+    color: $site-magenta;
+    &:hover{
+        color: $site-magenta;
+        transform: scale(1.05);
+    }
+}
+
+.btn-white-primary{
+    background: $white;
+    color: $primary-color;
+    &:hover{
+        color: $primary-color;
+        transform: scale(1.05);
     }
 }

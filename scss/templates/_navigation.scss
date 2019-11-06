@@ -146,6 +146,33 @@
             background: $site-froly;
         }
     }
+    &.magenta{
+        @include desktop{
+            background: $site-magenta;
+        }
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    color: #a9ebea;
+                    &.active{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .account-list{
+            li{
+                a{
+                    &.btn-colored{
+                        background: #f44183;
+                    }
+                }
+            }
+        }
+        &.nav-bg{
+            background: $site-magenta;
+        }
+    }
 }
 
 // Headroomjs Styles

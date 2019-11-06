@@ -87,7 +87,9 @@ $(document).ready(function () {
         }, 5000);
     }
 
-    counter();
+    if($('#odometer').length > 0){
+        counter();
+    }
 
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

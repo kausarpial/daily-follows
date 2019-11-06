@@ -8473,6 +8473,16 @@ h6, .h6 {
   color: #fff;
 }
 
+.btn-primary-outline {
+  color: #9579ff;
+  border: 1px solid #9579ff;
+}
+
+.btn-primary-outline:hover {
+  background: #9579ff;
+  color: #fff;
+}
+
 .btn-magenta-outline {
   color: #27cdcb;
   border: 1px solid #27cdcb;
@@ -8490,6 +8500,17 @@ h6, .h6 {
 
 .btn-white-magenta:hover {
   color: #27cdcb;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn-white-primary {
+  background: #fff;
+  color: #9579ff;
+}
+
+.btn-white-primary:hover {
+  color: #9579ff;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -9876,6 +9897,28 @@ h6, .h6 {
   background: #f77b8a;
 }
 
+@media (max-width: 991px) {
+  .main-nav.magenta {
+    background: #27cdcb;
+  }
+}
+
+.main-nav.magenta .navbar-nav .nav-item .nav-link {
+  color: #a9ebea;
+}
+
+.main-nav.magenta .navbar-nav .nav-item .nav-link.active {
+  color: #fff;
+}
+
+.main-nav.magenta .account-list li a.btn-colored {
+  background: #f44183;
+}
+
+.main-nav.magenta.nav-bg {
+  background: #27cdcb;
+}
+
 .headroom {
   position: fixed;
   top: 0;
@@ -10219,6 +10262,14 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
+.banner.banner-category-instant.bg-froly {
+  background: #f77b8a;
+}
+
+.banner.banner-category-instant.bg-magenta {
+  background: #27cdcb;
+}
+
 .banner-card {
   display: -webkit-box;
   display: flex;
@@ -10415,6 +10466,10 @@ h6, .h6 {
 .banner.banner-product-details .banner-background {
   -webkit-transform: scaleX(-1) translateY(-25%);
           transform: scaleX(-1) translateY(-25%);
+}
+
+.banner.banner-product-details.bg-froly {
+  background: #f77b8a;
 }
 
 /*# sourceMappingURL=maps/critical.css.map */
