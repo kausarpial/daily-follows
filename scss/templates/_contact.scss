@@ -1,0 +1,46 @@
+.contact{
+    padding: 0 0 100px;
+    &-form{
+        &-wrapper{
+            background: $white;
+            padding: 70px 50px;
+            border-radius: 0 100px;
+            margin-top: -250px;
+            @include tablet{
+                padding: 30px;
+            }
+        }
+        .form-group{
+            margin-bottom: 30px;
+            @include desktop{
+                margin-bottom: 25px;
+            }
+        }
+        textarea{
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .btn{
+            @include mobile{
+                display: block;
+                width: 100%;
+            }
+        }
+    } 
+}
+
+.privacy{
+    padding: 100px 0;
+    &-item{
+        h2{
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        p{
+            line-height: 30px;
+        }
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+}

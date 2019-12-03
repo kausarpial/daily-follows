@@ -173,6 +173,38 @@
             background: $site-magenta;
         }
     }
+    .dropdown-menu{
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow:  0px 25px 25px 0px rgba(22, 25, 93, 0.07);
+        border-radius: 5px;
+        padding: 5px 0;
+        position: relative;
+    }
+    .dropdown-item{
+        position: relative;
+        font-family: $secondary-font;
+        color: $text-color-dark;
+        padding: 15px 20px;
+        @include desktop{
+            text-align: center;
+        }
+    }
+    .dropdown-toggle::after{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+    .dropdown-menu.show{
+        @include desktop{
+            left: 0 !important;
+            top: 0 !important;
+        }
+    }   
+    .dropdown-item.active, .dropdown-item:active{
+        background: transparent;
+    }
 }
 
 // Headroomjs Styles

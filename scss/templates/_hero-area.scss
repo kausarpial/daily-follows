@@ -371,4 +371,60 @@
             background: $site-froly;
         }
     }
+
+    &.banner-checkout{
+        padding: 100px 0 280px;
+        @include desktop-lg{
+            padding: 100px 0 250px;
+        }
+        .banner-background{
+            transform: scaleX(-1) translateY(-25%);
+        }
+        &.bg-froly{
+            background: $site-froly;
+        }
+        &.bg-magenta{
+            background: $site-magenta;
+        }
+    }
+    &.banner-blog{
+        padding: 100px 0 280px;
+        @include desktop-lg{
+            padding: 100px 0 250px;
+        }
+        .banner-blog-single{
+            margin-top: 100px;
+            h1{
+                color: $white;
+                font-size: 40px;
+                width: 80%;
+                margin-bottom: 20px;
+                @include desktop{
+                    width: 100%;
+                }
+                @include tablet{
+                    font-size: 40px;
+                }
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+    &.banner-contact{
+        padding: 100px 0 280px;
+        @include desktop-lg{
+            padding: 100px 0 250px;
+        }
+        .banner-text{
+            p{
+                margin-bottom: 10px;
+                width: 70%;
+                @include desktop{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
 }

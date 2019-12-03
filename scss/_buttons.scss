@@ -125,3 +125,12 @@
         transform: scale(1.05);
     }
 }
+
+.btn-transparent{
+    background: rgba($color: $white, $alpha: 0.2);
+    color: $white;
+    &:hover{
+        color: $white;
+        transform: scale(1.05);
+    }
+}

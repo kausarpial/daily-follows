@@ -94,6 +94,48 @@ $(document).ready(function () {
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+
+    // Upsell dismiss
+    $('.checkout-upsell-dismiss').on('click', function(){
+        $('.checkout-upsell').css("display", "none");
+    });
+    $('.checkout-upsell-package-dismiss').on('click', function(){
+        $('.checkout-upsell-package').css("display", "none");
+    });
+
+    // Post Select toggle class
+    $('.checkout-post-image-item').on('click', function(){
+        $(this).toggleClass('active');
+    });
+
+    // $('.credit-card-text').keypress(function(){
+    //     var rawNumbers = $(this).val().replace(/-/g,'');
+    //     var cardLength = rawNumbers.length;
+    //     if(cardLength !==0 && cardLength <=12 && cardLength % 4 == 0){
+    //       $(this).val($(this).val()+'-');
+    //     }
+    // });
+
+    $( '.dropdown-menu .dropdown-toggle' ).on('click', function() {
+        var $el = $(this);
+        var $parent = $el.offsetParent(".dropdown-menu");
+        
+        if (!$el.next().hasClass("show")) {
+            $el.parents('.dropdown-menu').first().find(".show").removeClass("show");
+        }
+        $el.next(".dropdown-menu").toggleClass("show").parent("li").toggleClass("show");
+        
+        $el.parents("li.nav-item.dropdown.show").on("hidden.bs.dropdown", function () {
+            $(".dropdown-menu .show").removeClass("show");
+        });
+        
+        if (!$parent.parent().hasClass("navbar-nav")) {
+            $el.next().css({"top":$el[0].offsetTop,"left":$parent.outerWidth()});
+        }
+        
+        return false;
+    });
+      
 });
 
 $(window).on('scroll', function () {
