@@ -80,15 +80,47 @@
     }
     &-username{
         form{
-            display: flex;
+            // display: flex;
             .btn{
-                margin-left: 20px;
+                // margin-left: 20px;
                 @include tablet{
                     flex-wrap: wrap;
                     width: 100%;
                     margin-left: 0;
                     margin-top: 20px;
                 }
+            }
+            .form-control{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &-package{
+        background: #eef2f6;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        p{
+            margin-bottom: 0;
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: $text-color-dark;
+        }
+    }
+    &-form-submission{
+        padding: 0 20px;
+        text-align: center;
+        p{
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+        .form-check{
+            margin-bottom: 30px;
+            label{
+                font-weight: 700;
             }
         }
     }

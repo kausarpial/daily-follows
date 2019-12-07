@@ -135,6 +135,12 @@ $(document).ready(function () {
         
         return false;
     });
+
+    $('.navbar-collapse a.dropdown-toggle').click(function() {
+        if($('body').width() >= "992") {
+            location.href = $(this).attr('href');
+        }
+    });
       
 });
 

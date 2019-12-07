@@ -215,12 +215,20 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+.rounded-top-left{
+    border-top-left-radius: 80px !important;
+}
+
 .rounded-top-right{
-    border-radius: 0 80px 0 0 !important;
+    border-top-right-radius: 80px;
 }
 
 .rounded-bottom-left{
-    border-radius: 0 0 0 80px !important;
+    border-bottom-left-radius: 80px !important;
+}
+
+.rounded-bottom-right{
+    border-bottom-right-radius: 80px !important;
 }
 
 /* hover dropdown menus */
